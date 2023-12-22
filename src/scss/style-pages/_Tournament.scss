@@ -1,0 +1,404 @@
+.wrapper {
+  width: 100vw;
+}
+
+.tournament-match-hero {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.404)),
+    url("../../assets/images/ping-pong-background.jpg") no-repeat center / cover;
+  color: white;
+  text-align: center;
+
+  flex-direction: column;
+}
+
+.tournament-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .tournament-heading {
+    font-size: 20px;
+
+    @include media-xs {
+      font-size: 14px;
+    }
+  }
+
+  .marker-holder {
+    display: flex;
+    align-items: center;
+
+    @include media-xs {
+      font-size: 10px;
+    }
+
+    .plus-marker {
+      margin: 0 1vw 0 0;
+      border: 2px solid gray;
+      border-radius: 20px;
+      padding: 10px;
+
+      @include media-xs {
+        padding: 5px;
+      }
+    }
+  }
+
+  .all-fields-holder {
+    display: flex;
+    width: 80vw;
+    justify-content: space-evenly;
+    margin-top: 4vh;
+
+    .player-fields-left-holder {
+      margin: 2vh 0vw 0 0;
+      display: flex;
+      flex-direction: column;
+      .player-field-left-1 {
+        border: 2px solid gray;
+        border-radius: 20px;
+        padding: 5px 8px 5px 8px;
+        width: 40vw;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        margin-right: 2vw;
+
+        @include media-xs {
+        }
+
+        p {
+          margin: 0;
+          font-size: 18px;
+
+          @include media-xs {
+            font-size: 12px;
+          }
+        }
+      }
+      .player-field-left-2 {
+        border: 2px solid gray;
+        border-radius: 20px;
+        padding: 5px 8px 5px 8px;
+        display: flex;
+        justify-content: space-around;
+        margin-right: 2vw;
+
+        p {
+          margin: 0;
+
+          @include media-xs {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .player-fields-right-holder {
+    margin: 2vh 0 0 10vw;
+    .player-field-right-1 {
+      border: 2px solid gray;
+      border-radius: 20px;
+      padding: 5px 8px 5px 8px;
+
+      p {
+        margin: 0;
+
+        @include media-xs {
+          font-size: 12px;
+        }
+      }
+    }
+    .player-field-right-2 {
+      margin-top: 2vh;
+      border: 2px solid gray;
+      border-radius: 20px;
+      padding: 5px 8px 5px 8px;
+      width: 20vw;
+
+      p {
+        margin: 0;
+
+        @include media-xs {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .final-game {
+    margin: 5vh 0 0 0;
+    display: flex;
+    justify-content: center;
+
+    @include media-xs {
+      align-items: center;
+      margin: 5vh 0 0 0;
+    }
+
+    .winner-holder-final {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 5vw 1vh 0;
+
+      p {
+        font-weight: 700;
+
+        @include media-xs {
+          font-size: 12px;
+        }
+      }
+
+      select {
+        height: 4vh;
+        border: 2px solid gray;
+        background-color: gray;
+        border-radius: 20px;
+        padding: 5px 8px 5px 8px;
+      }
+    }
+
+    .player-field-final {
+      width: 40vw;
+
+      @include media-xs {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+      }
+      .finalist-1 {
+        border: 2px solid gray;
+        border-radius: 20px;
+        padding: 5px 8px 5px 8px;
+        font-weight: 700;
+        width: 20vw;
+
+        @include media-xs {
+          font-size: 12px;
+        }
+      }
+
+      .finalist-2 {
+        border: 2px solid gray;
+        border-radius: 20px;
+        padding: 5px 8px 5px 8px;
+        font-weight: 700;
+
+        @include media-xs {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .player-field-final-2 {
+      margin: 2vh 0 0 0;
+      border: 2px solid gray;
+      border-radius: 20px;
+      padding: 5px 8px 5px 8px;
+
+      p {
+        margin: 0;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .winner-box {
+    margin-top: 5vh;
+
+    @include media-xs {
+      font-size: 12px;
+    }
+  }
+
+  .winner-holder-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+      margin-bottom: 1vh;
+      font-weight: 700;
+
+      @include media-xs {
+        font-size: 12px;
+      }
+    }
+
+    select {
+      height: 4vh;
+      border: 2px solid gray;
+      background-color: gray;
+      border-radius: 20px;
+      padding: 5px 8px 5px 8px;
+    }
+  }
+
+  .winner-holder-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    p {
+      margin-bottom: 1vh;
+      font-weight: 700;
+
+      @include media-xs {
+        font-size: 12px;
+      }
+    }
+
+    select {
+      height: 4vh;
+      border: 2px solid gray;
+      background-color: gray;
+      border-radius: 20px;
+      padding: 5px 8px 5px 8px;
+    }
+  }
+}
+
+.loser {
+  color: rgb(148, 53, 53);
+  text-decoration: line-through;
+}
+.winner {
+  color: rgb(18, 194, 18);
+}
+
+.challenge-btn {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #313838;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #dadddd;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  border-radius: 20px;
+  margin-right: 1vw;
+  margin-top: 1vh;
+
+  @include media-xs {
+    font-size: 9px;
+  }
+}
+
+.challenge-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #00b3b3;
+  border-color: #00b3b3;
+}
+
+.tournament-players-buttons {
+  display: flex;
+  margin-top: 3vh;
+  max-width: 70%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.tournament-players-button:hover {
+  cursor: pointer;
+}
+
+.tournament-win-btn {
+  background-color: black;
+  border-radius: 20px;
+  padding: 0px 10px 0px 10px;
+  color: white;
+  min-width: 7vw;
+  font-size: 16px;
+  margin-bottom: 2px;
+
+  @include media-xs {
+    width: 20vw;
+
+    font-size: 12px;
+  }
+}
+
+.tournament-win-btn:hover {
+  cursor: pointer;
+}
+
+.finalist-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    width: fit-content;
+  }
+}
+
+.versus {
+  margin: 1vh 2vw 1vh 0;
+  font-size: 22px;
+
+  @include media-xs {
+    font-size: 14px;
+  }
+}
+
+.winner-box-holder {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .winner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      height: 15vh;
+      width: 8vw;
+      margin-bottom: 2vh;
+      border-radius: 50%;
+      border: 1px solid rgb(255, 255, 255);
+
+      @include media-xs {
+        width: 22vw;
+        height: auto;
+      }
+    }
+
+    h2 {
+      @include media-xs {
+        font-size: 30px;
+      }
+    }
+
+    h3 {
+      font-size: 25px;
+    }
+  }
+
+  .play-again {
+    margin: 0 0 8vh 0;
+
+    @include media-xs {
+      font-size: 16px;
+      padding: 10px 10px;
+    }
+  }
+}

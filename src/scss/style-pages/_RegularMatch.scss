@@ -1,0 +1,336 @@
+.wrapper {
+  width: 100vw;
+}
+
+.regular-match-hero {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.466), rgba(0, 0, 0, 0.404)),
+    url("../assets/images/ping-pong-background.jpg") no-repeat center / cover;
+  color: white;
+  text-align: center;
+  flex-direction: column;
+
+  .opponent-holder {
+    max-height: 15vh;
+    margin: 1vh 0 3vh 0;
+  }
+
+  .challenge-btn:hover {
+    cursor: pointer;
+  }
+}
+
+.regular-match-backbtn-holder {
+  width: 100vw;
+  display: flex;
+
+  button {
+    margin: 3vh 0 0 3vw;
+    background-color: transparent;
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    border: 1px solid gray;
+  }
+}
+
+.regular-match-playerinfo-holder {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  margin: 2vh 0 3vh 0;
+
+  @include media-xs {
+    margin-top: 2vh;
+  }
+
+  .player-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .player-name {
+      margin-bottom: 3vh;
+      font-size: 45px;
+      color: white;
+      letter-spacing: 1px;
+
+      @include media-xs {
+        font-size: 25px;
+        margin-bottom: 5vh;
+      }
+
+      @include media-smallest {
+        margin-bottom: 5vh;
+      }
+    }
+
+    .score-title {
+      margin: 0;
+      font-size: 24px;
+      padding: 0;
+
+      @include media-xs {
+        margin: 0;
+        font-size: 18px;
+        padding: 0;
+      }
+    }
+
+    .score-points {
+      margin: 0;
+      font-size: 20px;
+      color: #00b3b3;
+
+      @include media-xs {
+        margin: 0;
+        font-size: 14px;
+        padding: 0;
+      }
+    }
+
+    .upload-image::-webkit-file-upload-button {
+      display: none;
+      color: transparent;
+    }
+
+    .image-upload-label:hover {
+      cursor: pointer;
+    }
+
+    .image-holder {
+      position: relative;
+      img {
+        height: 15vh;
+        width: 8vw;
+        margin-bottom: 2vh;
+        border-radius: 50%;
+        border: 1px solid rgb(255, 255, 255);
+      }
+
+      @include media-xs {
+        img {
+          width: 23vw;
+          height: 14vh;
+        }
+      }
+
+      .image-upload-label {
+        margin-bottom: 3.4vh;
+        margin-left: -4vh;
+        z-index: 99;
+
+        position: absolute;
+        bottom: 0;
+        right: -1;
+        color: rgb(0, 0, 0);
+        border-radius: 20px;
+        padding: 2px 8px 2px 8px;
+
+        font-size: 15px;
+        background-color: #ffffff;
+
+        @include media-xs {
+          padding: 0 7px 0px 7px;
+        }
+
+        i {
+          font-size: 15px;
+          margin-top: 6px;
+
+          @include media-xs {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+
+    @include media-xs {
+      img {
+        width: 28vw;
+        height: 14vh;
+      }
+
+      h2 {
+        font-size: 24px;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
+
+.regular-match-gamestats-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 10vh;
+
+  @include media-xs {
+    flex-direction: column;
+  }
+}
+
+.active-games-wrapper {
+  height: 40vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+
+  @include media-xs {
+    width: 80vw;
+    height: 30vh;
+  }
+}
+
+.finished-games-wrapper {
+  height: 40vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+
+  display: flex;
+  align-items: center;
+
+  @include media-xs {
+    width: 80vw;
+    height: 30vh;
+  }
+}
+
+.profile-image {
+  height: 15vh;
+  width: 11vw;
+  margin-bottom: 2vh;
+  border-radius: 50%;
+
+  @include media-xs {
+    width: 22vw;
+    height: 14vh;
+  }
+}
+
+.win-percentage-title {
+  margin: 1vh 0 0 0;
+  font-size: 20px;
+
+  @include media-xs {
+    font-size: 14px;
+  }
+}
+
+.win-percentage-figures {
+  margin: 0;
+  color: #00b3b3;
+  font-size: 20px;
+  margin-left: 0.7vw;
+  @include media-xs {
+    font-size: 14px;
+    margin-left: 2vw;
+    margin-top: 4px;
+  }
+}
+
+.profile-hero {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.results-heading {
+  font-size: 20px;
+
+  @include media-xs {
+    font-size: 14px;
+  }
+}
+
+.wins {
+  color: #00b3b3;
+  font-size: 20px;
+
+  @include media-xs {
+    font-size: 14px;
+  }
+}
+
+.losses {
+  color: rgb(179, 0, 60);
+}
+
+.challenge-opponent-button {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 2px solid #313838;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #dadddd;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  border-radius: 20px;
+  margin-top: 1vh;
+
+  @include media-xs {
+    font-size: 12px;
+  }
+}
+
+.challenge-opponent-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #00b3b3;
+  border-color: #00b3b3;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
